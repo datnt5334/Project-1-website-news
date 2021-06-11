@@ -1,0 +1,449 @@
+/* font-family: 'Montserrat', sans-serif; */
+
+/* Global Styling */
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+hr{
+    width: 95vw;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat", "sans-serif";   
+}
+
+/* Header Styling */
+
+.header{
+    height: 100px;
+    padding: 0 10px;
+    background: #252525;
+    color: #fff;
+}
+
+.body{
+    background: #fff;
+}
+
+.website-name{
+    line-height: 100px;
+    float: left;
+    text-transform: uppercase;
+}
+
+
+.menu{
+    float: right;
+    line-height: 100px;
+}
+
+.menu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 1s;
+}
+
+.menu a:nth-last-child(2){
+    margin-left: 100px;
+}
+
+.show-menu-btn{
+    float: right;
+}
+
+.show-menu-btn i{
+    line-height: 100px;
+}
+
+.show-menu-btn, .hide-menu-btn{
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+    color:  #3498db;
+}
+
+.account{
+    margin-left: 300px;
+
+}
+
+#chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+
+/**** Banner Styling ****/
+
+.banner{
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 30px 0;
+    margin-top: 8px;
+}
+
+.banner-right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 30px;
+    padding: 10px 10px;
+
+}
+
+.banner-right h3{
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.banner-right p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.banner-right article{
+    padding: 10px;
+}
+
+
+.banner-left{
+    padding: 0 2rem;
+    line-height: 1.7;
+    padding-left: 80px;
+}
+
+.banner-left-top h1{
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+
+
+.banner-left-bottom hr{
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.banner-left-bottom hr:last-child{
+    display: none;
+}
+
+.banner-left-bottom p{
+    font-size: .9rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.banner-left-bottom h3{
+    margin-top: 20px;
+}
+
+/**  Main Styling **/
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+main a{
+    padding: 15px 0;
+    display: block;
+    transition: all 0.5s;
+}
+
+main span{
+    transition: padding-left 0.5s;   
+}
+
+main a:hover span{
+    padding-left: 5px;
+
+}
+
+main a:hover{
+    color: #7ac64d;
+}
+
+.main-container-left{
+    padding: 30px 80px;
+}
+
+.main-container-left > h2{
+    padding: 15px 0 15px 0px;
+}
+
+.main-container-left article{
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+     padding: 15px 0;
+}
+
+.main-container-left img{
+    width: 300px;
+    height: 200px;
+    align-self: center;
+}
+
+.main-container-left h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    align-self: center;
+}
+
+.main-container-left article h2{
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.main-container-left article p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.main-container-left article div{
+    margin-right: 10px;
+
+}
+
+.btn-load {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    width: 25vw;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-left: 200px;
+    padding: 10px;
+    cursor: pointer;
+    background: #252525;
+    font-family: "Montserrat", "sans-serif";
+    transition: background 1s ease;
+}
+
+.btn-load:hover{
+    color: #d7d4f0;
+}
+
+.hide-btn {
+    display: none;
+}
+
+/****** Footer Styling ******/
+
+footer{
+    background: #252525;
+    color: #f3f3f3;
+    padding: 30px;
+}
+
+footer h2{
+    padding: 10px 0;  
+}
+
+footer p{
+    padding: 10px 0;
+    line-height: 1.3;
+}
+
+.footer-left,
+.footer-right{
+    margin: 0 20px;
+}
+
+footer > p{
+    text-align: center;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+.footer-right i{
+    font-size: 1.8rem;
+    color: #808080;
+}
+
+.footer-right input{
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #808080;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.footer-right div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 200px;
+    padding: 10px 0;
+    border-bottom: 1.6px solid #808080;
+}
+
+.footer-container {
+    display: flex;
+}
+
+.footer-left,
+.footer-right{
+    flex: 1;
+}
+
+/* scroll button */
+
+#topBtn{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background: #252525;
+    color: #f3f3f3;
+    opacity: 0.4;
+    cursor: pointer;
+    border: none;
+    display: none;
+}
+
+
+@media screen and (max-width:1300px){
+
+    /* Header Styling */
+
+    .show-menu-btn, .hide-menu-btn{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        z-index: 1111;
+        width: 40%;
+        height: 100vh;
+        right: -100%;
+        background: #333;
+        top: 0;
+        padding: 80px 0;
+        text-align: center;
+        line-height: normal;
+        transition: 0.7s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+        
+    }
+
+    .menu a:nth-child(2){
+        color: #F64C72;
+    }
+
+    .menu a:nth-last-child(1){
+        margin-top: 20px;
+        background: #B73225;
+    }
+
+    .menu a:nth-last-child(2){
+        margin-left: 0px;
+        margin-top: 60px;
+        background: #3498db;
+    }
+
+
+    .menu a:hover{
+        background-color: #0e0e0e;
+    }
+
+
+    .hide-menu-btn{
+        position: absolute;
+        top: 30px;
+        right: 40px;
+    }
+
+    /* Main */
+
+    main {
+        display: block;
+    }
+
+    #chk:checked ~ .menu{
+        right: 0%;
+    }
+
+}
+
+@media screen and (max-width:1080px){
+
+    /* Header Styling */
+
+    .menu {
+        width: 45%;
+    }
+    
+    /* Banner Styling */
+
+    .banner{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:768px){
+
+    /* Header Styling */
+
+    .menu {
+        width: 50%;
+    }
+
+    /* Banner Styling */
+
+    .banner-sub-content{
+        display: block;
+    }
+
+    .container-bottom-left{
+        display: block;
+    }
+
+    /* Main */
+
+    main {
+        display: block;
+    }
+
+    /* Footer */
+
+    .footer-container {
+        display: block;
+    }
+
+
+    #chk:checked ~ .menu{
+        right: 0%;
+    }
+
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/decorators/admin.jsp" value="file://$PROJECT_DIR$/src/main/webapp/decorators" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/decorators/web.jsp" value="file://$PROJECT_DIR$/src/main/webapp/decorators" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/admin/news/edit.jsp" value="file://$PROJECT_DIR$/src/main/webapp/views/admin/news" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/admin/news/list.jsp" value="file://$PROJECT_DIR$/src/main/webapp/views/admin/news" />
+      </map>
+    </option>
+  </component>
+</project>
