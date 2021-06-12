@@ -12,7 +12,7 @@ a{
 }
 
 hr{
-    width: 95vw;
+    width: 55vw;
     margin: 0 auto;
 }
 
@@ -172,7 +172,7 @@ main a:hover{
 }
 
 .main-container-right article h2{
-    font-size: 18px;
+    font-size: 16px;
     padding: 10px 0;
 }
 
@@ -185,6 +185,90 @@ main a:hover{
     margin-right: 10px;
 
 }
+
+.main-container-left h2{
+    padding-top: 50px;
+}
+
+.main-container-left h4{
+    position: absolute;
+    padding-top: 100px;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+
+.textarea-config textarea{
+    font-size: 18px;
+    resize: none;
+    padding: 18px;
+    margin-top: 50px;
+    outline: none;
+}
+
+.textarea-config textarea::placeholder{
+    font-size: 18px;
+}
+
+.submit-config {
+    padding-top: 10px;
+    padding-bottom: 5rem;
+    float: right;
+}
+
+.submit-config i{
+    padding-right: 15px;
+    font-size: 1.5rem;
+}
+
+.submit-config > .profileImage{
+
+}
+
+.submit-config span{
+    padding-right: 20px;
+}
+
+.submit-config button{
+    font-size: 1.2rem;
+    padding: 8px 60px 8px 60px;
+    background: #0d0a0b;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.comment {
+    padding: 50px 20px 0px 20px;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+
+.comment-left {
+    font-size: 2.5rem;
+    padding-bottom: 30px;
+}
+
+.profileImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #3e3e3e;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+}
+
+.comment-right {
+    padding-bottom: 30px;
+}
+
+.comment-right strong{
+    padding-right: 10px;
+}
+
 
 /****** Footer Styling ******/
 
