@@ -25,7 +25,7 @@
                 </a>
             </li>
             <li>
-                <a href="<c:url value="admin-news?type=list&page=1&maxPageItem=3&sortName=createddate&sortBy=desc"/> ">
+                <a href="<c:url value="admin-news?type=list&page=1&maxPageItem=5&sortName=createddate&sortBy=desc"/> ">
                     <span class="ti-write"></span>
                     <span>Quản lý bài viết</span>
                 </a>
