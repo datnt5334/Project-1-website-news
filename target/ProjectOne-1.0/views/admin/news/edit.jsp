@@ -50,26 +50,26 @@
         <br /> <br />
         <div class="form-group">
             <label class="col-sm-3">Tiêu đề</label>
-            <div class="col-sm-3">
-                <textarea id="title" name="title" style="width: 500px; height: 50px">${model.title}</textarea>
+            <div class="col-sm-3 content-rps">
+                <textarea id="title" name="title">${model.title}</textarea>
             </div>
         </div>
         <br /> <br />
         <div class="form-group">
             <label class="col-sm-3 control-label no-padding-right">Hình
                 đại diện</label>
-            <div class="col-sm-9">
+            <div class="col-sm-9 img-rps">
                 <input type="file" onchange="previewFile()">
                 <br /> <br />
-                <img src="${model.thumbnail}" height="200" alt="Image preview...">
+                <img src="${model.thumbnail}" height="200" width="300" alt="Image preview...">
             </div>
         </div>
         <br /> <br />
         <div class="form-group">
             <label class="col-sm-3 control-label no-padding-right">Mô
                 tả ngắn</label>
-            <div class="col-sm-9">
-                <textarea id="shortDescription" name="shortDescription" style="width: 500px; height: 120px">${model.shortDescription}
+            <div class="col-sm-9 content-rps">
+                <textarea id="shortDescription" name="shortDescription">${model.shortDescription}
                 </textarea>
             </div>
         </div>
@@ -101,21 +101,21 @@
         <div class="summary-single">
             <span class="fas fa-user-alt"></span>
             <div>
-                <h5 id="counter" data-target="1960">0</h5>
+                <h5 id="counter" data-target="${totalUser}">0</h5>
                 <small>Tài khoản</small>
             </div>
         </div>
         <div class="summary-single">
             <span class="fas fa-file-alt"></span>
             <div>
-                <h5 id="counter" data-target="5000">0</h5>
+                <h5 id="counter" data-target="${totalNews}">0</h5>
                 <small>Bài viết</small>
             </div>
         </div>
         <div class="summary-single">
             <span class="fas fa-comment-alt"></span>
             <div>
-                <h5 id="counter" data-target="10000">0</h5>
+                <h5 id="counter" data-target="${totalComment}">0</h5>
                 <small>Bình luận</small>
             </div>
         </div>

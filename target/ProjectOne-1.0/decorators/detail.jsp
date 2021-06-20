@@ -16,7 +16,7 @@
     <title></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="<c:url value='/template/detail/style.css'/>">
+    <link rel="stylesheet" href="<c:url value='/template/detail/styles.css'/>">
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,6 +27,8 @@
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="<c:url value='/template/detail/events.js'/>"></script>
 
 </head>
 <body>
@@ -45,7 +47,6 @@
 
 <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script type="text/javascript" src="<c:url value='/template/detail/event.js'/>"></script>
 
 </body>
 </html>

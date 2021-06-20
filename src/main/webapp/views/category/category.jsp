@@ -16,14 +16,14 @@
 
 <body>
 <input type="hidden" value="${category.id}" id="categoryId" name="categoryId" />
-<input type="hidden" value="${model1.totalItem}" id="totalItems" name="totalItems" />
+<input type="hidden" value="${model.totalItem}" id="totalItems" name="totalItems" />
 <section class="banner">
     <div class="banner-left">
         <div class="banner-left-top">
             <h1>${category.name}</h1>
         </div>
         <div class="banner-left-bottom">
-            <c:forEach var="item" items="${model1.listResult}" end="3">
+            <c:forEach var="item" items="${model.listResult}" end="3">
                 <a href="<c:url value='/chi-tiet?id=${item.id}'/>">
                     <h3>${item.title}</h3>
                 </a>
@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="banner-right">
-        <c:forEach var="item" items="${model1.listResult}" begin="4" end="5">
+        <c:forEach var="item" items="${model.listResult}" begin="4" end="5">
             <article>
                 <img src="${item.thumbnail}">
                 <div>
@@ -54,7 +54,7 @@
     <section class="main-container-left">
         <h2>Tin tức mới nhất</h2>
         <div id="content">
-            <c:forEach var="item" items="${model2.listResult}">
+            <c:forEach var="item" items="${model.listResult}" begin="0" end="3">
                 <article class="load load-more">
                     <div>
                         <h2>${item.title}</h2>
@@ -67,7 +67,14 @@
                 </article>
             </c:forEach>
         </div>
-        <button onclick="loadMore()" class="btn-load" id="loadBtn">Xem thêm</button>
+        <c:if test="${model.totalItem > 5}">
+            <button onclick="loadMore()" class="btn-load" id="loadBtn">Xem thêm</button>
+        </c:if>
+        <c:if test="${model.totalItem == 0}">
+            <div class="no-news">
+                <h3 >Chưa có bài viết nào</h3>
+            </div>
+        </c:if>
     </section>
 </main>
 <script>
@@ -87,7 +94,7 @@
             success: function (result) {
                 var row = document.getElementById('content');
                 row.innerHTML += result;
-                if ((amount+limit) == totalItems) {
+                if ((amount+limit) >= totalItems) {
                     document.getElementById('loadBtn').style.display = "none";
                 }
             },

@@ -12,7 +12,7 @@ a{
 }
 
 hr{
-    width: 55vw;
+    width: 95vw;
     margin: 0 auto;
 }
 
@@ -20,7 +20,7 @@ hr{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: "Montserrat", "sans-serif";
+    font-family: "Montserrat", "sans-serif";   
 }
 
 /* Header Styling */
@@ -33,6 +33,8 @@ hr{
 }
 
 .body{
+    padding: 0px;
+    margin: 0px;
     background: #fff;
 }
 
@@ -92,6 +94,71 @@ hr{
     z-index: -1111;
 }
 
+
+/**** Banner Styling ****/
+
+.banner{
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 30px 0;
+    margin-top: 8px;
+}
+
+.banner-right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 30px;
+    padding: 10px 10px;
+
+}
+
+.banner-right h3{
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.banner-right p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.banner-right article{
+    padding: 10px;
+}
+
+
+.banner-left{
+    padding: 0 2rem;
+    line-height: 1.7;
+}
+
+.banner-left-top h1{
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+
+
+.banner-left-bottom hr{
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.banner-left-bottom hr:last-child{
+    display: none;
+}
+
+.banner-left-bottom p{
+    font-size: .9rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.banner-left-bottom h3{
+    margin-top: 20px;
+}
+
 /**  Main Styling **/
 
 main {
@@ -106,7 +173,7 @@ main a{
 }
 
 main span{
-    transition: padding-left 0.5s;
+    transition: padding-left 0.5s;   
 }
 
 main a:hover span{
@@ -119,51 +186,26 @@ main a:hover{
 }
 
 .main-container-left{
-    padding: 80px 80px;
+    padding: 30px 0px 30px 30px;
 }
 
-.main-container-left h1:first-child{
-    padding-bottom: 40px;
+.main-container-left > h2{
+    padding: 15px 0 15px 0px;
+}
+
+.main-container-left article{
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+     padding: 15px 0;
 }
 
 .main-container-left img{
-    padding: 30px 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-}
-
-/* Main Container Right */
-
-
-.main-container-right{
-    padding: 30px 10px;
-}
-
-.main-container-right > h2{
-    padding: 15px 0 15px 30px;
-}
-
-.main-container-right article{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 15px 0;
-    border-bottom: 1px solid #7ac64d;
-
-}
-
-.main-container-right article:last-child{
-    border-bottom: none;
-}
-
-.main-container-right img{
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     align-self: center;
 }
 
-.main-container-right h4{
+.main-container-left h4{
     text-align: center;
     text-transform: uppercase;
     font-weight: 300;
@@ -171,104 +213,49 @@ main a:hover{
     align-self: center;
 }
 
-.main-container-right article h2{
-    font-size: 16px;
+.main-container-left article h2{
+    font-size: 18px;
     padding: 10px 0;
 }
 
-.main-container-right article p{
+.main-container-left article p{
     font-size: 15px;
     font-weight: 300;
 }
 
-.main-container-right article div{
+.main-container-left article div{
     margin-right: 10px;
-
 }
 
-.main-container-left h2{
-    padding-top: 50px;
-}
-
-.main-container-left h4{
-    position: absolute;
-    padding-top: 100px;
-    padding-left: 20px;
-    font-size: 18px;
-}
-
-
-.textarea-config textarea{
-    font-size: 18px;
-    resize: none;
-    padding: 18px;
-    margin-top: 50px;
+.btn-load {
     outline: none;
-}
-
-.textarea-config textarea::placeholder{
-    font-size: 18px;
-}
-
-.submit-config {
-    padding-top: 10px;
-    padding-bottom: 5rem;
-    float: right;
-}
-
-.submit-config i{
-    padding-right: 15px;
-    font-size: 1.5rem;
-}
-
-.submit-config > .profileImage{
-
-}
-
-.submit-config span{
-    padding-right: 20px;
-}
-
-.submit-config button{
-    font-size: 1.2rem;
-    padding: 8px 60px 8px 60px;
-    background: #0d0a0b;
     border: none;
-    outline: none;
-    color: #ffffff;
+    border-radius: 5px;
+    color: #076DB6;
+    width: 60vw;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    padding: 10px;
     cursor: pointer;
+    background: #f7f7f7;
+    font-family: "Montserrat", "sans-serif";
+    transition: background .2s ease;
 }
 
-.comment {
-    padding: 50px 20px 0px 20px;
-    display: grid;
-    grid-template-columns: 1fr 10fr;
+.btn-load:hover{
+    color: #d7d4f0;
+    background: #0e0e0e;
 }
 
-.comment-left {
-    font-size: 2.5rem;
-    padding-bottom: 30px;
+.hide-btn {
+    display: none;
 }
 
-.profileImage {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #3e3e3e;
-    font-size: 20px;
-    color: #fff;
+.no-news h3 {
+    font-size: 1.4rem;
     text-align: center;
-    line-height: 60px;
+    padding-top: 40px;
 }
-
-.comment-right {
-    padding-bottom: 30px;
-}
-
-.comment-right strong{
-    padding-right: 10px;
-}
-
 
 /****** Footer Styling ******/
 
@@ -279,7 +266,7 @@ footer{
 }
 
 footer h2{
-    padding: 10px 0;
+    padding: 10px 0;  
 }
 
 footer p{
@@ -349,7 +336,7 @@ footer > p{
 }
 
 
-@media screen and (max-width:1300px){
+@media screen and (max-width:1400px){
 
     /* Header Styling */
 
@@ -373,7 +360,7 @@ footer > p{
     .menu a{
         display: block;
         padding: 20px;
-
+        
     }
 
     .menu a:nth-child(2){
@@ -405,10 +392,6 @@ footer > p{
 
     /* Main */
 
-    main {
-        display: block;
-    }
-
     #chk:checked ~ .menu{
         right: 0%;
     }
@@ -423,10 +406,19 @@ footer > p{
         width: 45%;
     }
 
+    .banner-left-bottom {
+        width: 75vh;
+    }
+    
     /* Banner Styling */
 
     .banner{
         grid-template-columns: 1fr;
+    }
+
+
+    .btn-load {
+        width: 80vw;
     }
 }
 
@@ -435,7 +427,7 @@ footer > p{
     /* Header Styling */
 
     .menu {
-        width: 55%;
+        width: 65%;
     }
 
     /* Banner Styling */
@@ -444,14 +436,23 @@ footer > p{
         display: block;
     }
 
+    .banner-left-bottom {
+        width: 60vh;
+    }
+
     .container-bottom-left{
         display: block;
     }
 
     /* Main */
 
-    main {
-        display: block;
+    .main-container-left img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .main-container-left {
+        padding-left: 20px;
     }
 
     /* Footer */
@@ -465,4 +466,15 @@ footer > p{
         right: 0%;
     }
 
+}
+
+@media screen and (max-width:320px){
+
+    .banner-right {
+        display: block;
+    }
+
+    .banner-left-bottom {
+        width: 30vh;
+    }
 }

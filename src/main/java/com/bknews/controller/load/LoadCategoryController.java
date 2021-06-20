@@ -1,8 +1,11 @@
 package com.bknews.controller.load;
 
+import com.bknews.loading.LoadRequest;
+import com.bknews.loading.Loadable;
 import com.bknews.model.NewsModel;
 import com.bknews.service.ICategoryService;
 import com.bknews.service.INewsService;
+import com.bknews.sort.Sorter;
 import com.bknews.utils.FromUtil;
 
 import javax.inject.Inject;
@@ -28,7 +31,9 @@ public class LoadCategoryController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         NewsModel model = FromUtil.toModel(NewsModel.class, request);
-        List<NewsModel> listNews = newsService.findByCategoryId(model.getCategoryId(),model.getOffset(),model.getLimit());
+        Sorter sorter = new Sorter("createddate", "desc");
+        Loadable loadable = new LoadRequest(model.getOffset(), model.getLimit(), sorter);
+        List<NewsModel> listNews = newsService.findByCategoryId(model.getCategoryId(), loadable);
         PrintWriter out = response.getWriter();
         for (NewsModel o: listNews) {
             out.println("<div id=\"content\">\n" +

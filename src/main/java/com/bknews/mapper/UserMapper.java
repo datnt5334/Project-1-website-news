@@ -12,9 +12,11 @@ public class UserMapper implements RowMapper<UserModel> {
     public UserModel mapRow(ResultSet resultSet) {
         try{
             UserModel user = new UserModel();
+            user.setId(resultSet.getLong("id"));
             user.setUserName(resultSet.getString("username"));
             user.setFullName(resultSet.getString("fullname"));
             user.setPassword(resultSet.getString("password"));
+            user.setRoleId(resultSet.getLong("roleid"));
             user.setCreatedDate(resultSet.getTimestamp("createddate"));
             try {
                 RoleModel role = new RoleModel();

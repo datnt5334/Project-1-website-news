@@ -1,10 +1,15 @@
 package com.bknews.service.impl;
 
 import com.bknews.dao.ICategoryDAO;
+import com.bknews.dao.ICommentDAO;
 import com.bknews.dao.INewsDAO;
+import com.bknews.loading.LoadRequest;
+import com.bknews.loading.Loadable;
 import com.bknews.model.CategoriesModel;
+import com.bknews.model.CommentModel;
 import com.bknews.model.NewsModel;
 import com.bknews.paging.Pageble;
+import com.bknews.service.ICommentService;
 import com.bknews.service.INewsService;
 
 import javax.inject.Inject;
@@ -19,9 +24,12 @@ public class NewsService implements INewsService {
     @Inject
     private ICategoryDAO categoryDAO;
 
+    @Inject
+    private ICommentDAO commentDAO;
+
     @Override
-    public List<NewsModel> findByCategoryId(Long categoryId, Integer offset, Integer limit) {
-        return newsDAO.findByCategoryId(categoryId, offset, limit);
+    public List<NewsModel> findByCategoryId(Long categoryId, Loadable loadable) {
+        return newsDAO.findByCategoryId(categoryId, loadable);
     }
 
     @Override
@@ -48,6 +56,10 @@ public class NewsService implements INewsService {
     @Override
     public void delete(Long[] ids) {
         for (long id: ids) {
+            List<CommentModel> listComments = commentDAO.findByNewsIdToRemove(id);
+            for (CommentModel comment: listComments) {
+                commentDAO.delete(comment.getId());
+            }
             newsDAO.delete(id);
         }
     }

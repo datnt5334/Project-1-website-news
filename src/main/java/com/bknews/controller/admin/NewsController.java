@@ -6,7 +6,9 @@ import com.bknews.model.NewsModel;
 import com.bknews.paging.PageRequest;
 import com.bknews.paging.Pageble;
 import com.bknews.service.ICategoryService;
+import com.bknews.service.ICommentService;
 import com.bknews.service.INewsService;
+import com.bknews.service.IUserService;
 import com.bknews.sort.Sorter;
 import com.bknews.utils.FromUtil;
 import com.bknews.utils.MessageUtil;
@@ -31,6 +33,12 @@ public class NewsController extends HttpServlet {
     @Inject
     private ICategoryService categoryService;
 
+    @Inject
+    private IUserService userService;
+
+    @Inject
+    private ICommentService commentService;
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         NewsModel model = FromUtil.toModel(NewsModel.class, request);
         String view = "";
@@ -49,6 +57,12 @@ public class NewsController extends HttpServlet {
             request.setAttribute("categories", categoryService.findAll());
             view = "views/admin/news/edit.jsp";
         }
+        Integer totalNews = newsService.getTotalItem();
+        Integer totalUser = userService.getTotalItem();
+        Integer totalComment = commentService.getTotalItem();
+        request.setAttribute("totalNews", totalNews);
+        request.setAttribute("totalUser", totalUser);
+        request.setAttribute("totalComment", totalComment);
         request.setAttribute(SystemConstant.MODEL, model);
         RequestDispatcher rd = request.getRequestDispatcher(view);
         rd.forward(request, response);

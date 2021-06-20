@@ -26,7 +26,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
     <script src="<c:url value="/template/paging/jquery.twbsPagination.js"/>" type="text/javascript"></script>
 
-    <link rel="stylesheet" href="<c:url value='/template/admin/style.css'/>">
+    <link rel="stylesheet" href="<c:url value='/template/admin/styles.css'/>">
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -61,6 +61,6 @@
     </main>
 </div>
 
-<script type="text/javascript" src="<c:url value='/template/admin/events.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/template/admin/event.js'/>"></script>
 </body>
 </html>

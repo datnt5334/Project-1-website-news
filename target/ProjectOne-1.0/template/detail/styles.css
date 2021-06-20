@@ -12,7 +12,7 @@ a{
 }
 
 hr{
-    width: 95vw;
+    width: 55vw;
     margin: 0 auto;
 }
 
@@ -20,7 +20,7 @@ hr{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: "Montserrat", "sans-serif";   
+    font-family: "Montserrat", "sans-serif";
 }
 
 /* Header Styling */
@@ -57,7 +57,7 @@ hr{
 }
 
 .menu a:nth-last-child(2){
-    margin-left: 100px;
+    margin-left: 200px;
 }
 
 .show-menu-btn{
@@ -92,72 +92,6 @@ hr{
     z-index: -1111;
 }
 
-
-/**** Banner Styling ****/
-
-.banner{
-    min-height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 30px 0;
-    margin-top: 8px;
-}
-
-.banner-right{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 10px 30px;
-    padding: 10px 10px;
-
-}
-
-.banner-right h3{
-    padding: 10px 0;
-    font-size: 18px;
-}
-
-.banner-right p{
-    font-size: 15px;
-    font-weight: 300;
-}
-
-.banner-right article{
-    padding: 10px;
-}
-
-
-.banner-left{
-    padding: 0 2rem;
-    line-height: 1.7;
-    padding-left: 80px;
-}
-
-.banner-left-top h1{
-    font-size: 2rem;
-    padding-bottom: 30px;
-}
-
-
-.banner-left-bottom hr{
-    width: 50vw;
-    margin: 0 auto;
-}
-
-.banner-left-bottom hr:last-child{
-    display: none;
-}
-
-.banner-left-bottom p{
-    font-size: .9rem;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.banner-left-bottom h3{
-    margin-top: 20px;
-}
-
 /**  Main Styling **/
 
 main {
@@ -172,7 +106,7 @@ main a{
 }
 
 main span{
-    transition: padding-left 0.5s;   
+    transition: padding-left 0.5s;
 }
 
 main a:hover span{
@@ -185,26 +119,51 @@ main a:hover{
 }
 
 .main-container-left{
-    padding: 30px 80px;
+    padding: 80px 80px;
 }
 
-.main-container-left > h2{
-    padding: 15px 0 15px 0px;
-}
-
-.main-container-left article{
-     display: grid;
-     grid-template-columns: 2fr 1fr;
-     padding: 15px 0;
+.main-container-left h1:first-child{
+    padding-bottom: 40px;
 }
 
 .main-container-left img{
-    width: 300px;
-    height: 200px;
+    padding: 30px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+/* Main Container Right */
+
+
+.main-container-right{
+    padding: 30px 10px;
+}
+
+.main-container-right > h2{
+    padding: 15px 0 15px 30px;
+}
+
+.main-container-right article{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 15px 0;
+    border-bottom: 1px solid #7ac64d;
+
+}
+
+.main-container-right article:last-child{
+    border-bottom: none;
+}
+
+.main-container-right img{
+    width: 150px;
+    height: 150px;
     align-self: center;
 }
 
-.main-container-left h4{
+.main-container-right h4{
     text-align: center;
     text-transform: uppercase;
     font-weight: 300;
@@ -212,44 +171,137 @@ main a:hover{
     align-self: center;
 }
 
-.main-container-left article h2{
-    font-size: 18px;
+.main-container-right article h2{
+    font-size: 16px;
     padding: 10px 0;
 }
 
-.main-container-left article p{
+.main-container-right article p{
     font-size: 15px;
     font-weight: 300;
 }
 
-.main-container-left article div{
+.main-container-right article div{
     margin-right: 10px;
 
+}
+
+.main-container-left h2{
+    padding-top: 50px;
+}
+
+.main-container-left h4{
+    position: absolute;
+    padding-top: 100px;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+
+.textarea-config textarea{
+    font-size: 18px;
+    resize: none;
+    padding: 18px;
+    margin-top: 50px;
+    outline: none;
+}
+
+.textarea-config textarea::placeholder{
+    font-size: 18px;
+}
+
+.submit-config {
+    padding-top: 10px;
+    padding-bottom: 5rem;
+    float: right;
+}
+
+.submit-config i{
+    padding-right: 15px;
+    font-size: 1.5rem;
+}
+
+.submit-config > .profileImage{
+
+}
+
+.submit-config span{
+    padding-right: 20px;
+}
+
+.submit-config button{
+    font-size: 1.2rem;
+    padding: 8px 60px 8px 60px;
+    background: #0d0a0b;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.comment {
+    padding: 50px 20px 0px 20px;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+
+.comment-left {
+    font-size: 2.5rem;
+    padding-bottom: 30px;
+}
+
+.profileImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #3e3e3e;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+}
+
+.comment-right {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    padding-bottom: 30px;
+}
+
+.comment-right strong{
+    padding-right: 10px;
+}
+
+.comment-right a{
+    padding-top: 0px;
+    margin: 0px;
+    padding-left: 10px;
 }
 
 .btn-load {
     outline: none;
     border: none;
     border-radius: 5px;
-    color: #ffffff;
-    width: 25vw;
+    color: #076DB6;
+    width: 53vw;
     font-size: 1.3rem;
     margin-top: 20px;
-    margin-left: 200px;
     padding: 10px;
     cursor: pointer;
-    background: #252525;
+    background: #f7f7f7;
     font-family: "Montserrat", "sans-serif";
-    transition: background 1s ease;
+    transition: background .2s ease;
 }
 
 .btn-load:hover{
     color: #d7d4f0;
+    background: #3e3e3e;
 }
 
-.hide-btn {
-    display: none;
+.no-comment h3{
+    font-size: 1.3rem;
+    text-align: center;
 }
+
 
 /****** Footer Styling ******/
 
@@ -260,7 +312,7 @@ footer{
 }
 
 footer h2{
-    padding: 10px 0;  
+    padding: 10px 0;
 }
 
 footer p{
@@ -354,7 +406,7 @@ footer > p{
     .menu a{
         display: block;
         padding: 20px;
-        
+
     }
 
     .menu a:nth-child(2){
@@ -403,7 +455,7 @@ footer > p{
     .menu {
         width: 45%;
     }
-    
+
     /* Banner Styling */
 
     .banner{
@@ -416,7 +468,7 @@ footer > p{
     /* Header Styling */
 
     .menu {
-        width: 50%;
+        width: 55%;
     }
 
     /* Banner Styling */

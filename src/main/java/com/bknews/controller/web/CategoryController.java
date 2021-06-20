@@ -1,8 +1,11 @@
 package com.bknews.controller.web;
 
+import com.bknews.loading.LoadRequest;
+import com.bknews.loading.Loadable;
 import com.bknews.model.NewsModel;
 import com.bknews.service.ICategoryService;
 import com.bknews.service.INewsService;
+import com.bknews.sort.Sorter;
 import com.bknews.utils.FromUtil;
 
 import javax.enterprise.inject.Model;
@@ -27,21 +30,14 @@ public class CategoryController extends HttpServlet {
     private ICategoryService categoryService;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        NewsModel model1 = FromUtil.toModel(NewsModel.class, request);
-        NewsModel model2 = FromUtil.toModel(NewsModel.class, request);
-        model1.setOffset(0);
-        model1.setLimit(6);
-        model1.setListResult(newsService.findByCategoryId(model1.getCategoryId(), model1.getOffset(),
-                model1.getLimit()));
-        model1.setTotalItem(newsService.getTotalByCategoryId(model1.getCategoryId()));
-        model2.setOffset(0);
-        model2.setLimit(4);
-        model2.setListResult(newsService.findByCategoryId(model2.getCategoryId(), model2.getOffset(),
-                model2.getLimit()));
+        NewsModel model = FromUtil.toModel(NewsModel.class, request);
+        Sorter sorter = new Sorter("createddate", "desc");
+        Loadable loadable = new LoadRequest(model.getOffset(), model.getLimit(), sorter);
+        model.setListResult(newsService.findByCategoryId(model.getCategoryId(), loadable));
+        model.setTotalItem(newsService.getTotalByCategoryId(model.getCategoryId()));
         request.setAttribute("categories", categoryService.findAll());
-        request.setAttribute("category", categoryService.findOne(model1.getCategoryId()));
-        request.setAttribute("model1", model1);
-        request.setAttribute("model2", model2);
+        request.setAttribute("category", categoryService.findOne(model.getCategoryId()));
+        request.setAttribute("model", model);
         RequestDispatcher rd = request.getRequestDispatcher("views/category/category.jsp");
         rd.forward(request, response);
     }

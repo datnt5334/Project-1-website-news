@@ -13,21 +13,21 @@
         <div class="summary-single">
             <span class="fas fa-user-alt"></span>
             <div>
-                <h5 id="counter" data-target="1960">0</h5>
+                <h5 id="counter" data-target="${totalUser}">0</h5>
                 <small>Tài khoản</small>
             </div>
         </div>
         <div class="summary-single">
             <span class="fas fa-file-alt"></span>
             <div>
-                <h5 id="counter" data-target="5000">0</h5>
+                <h5 id="counter" data-target="${totalNews}">0</h5>
                 <small>Bài viết</small>
             </div>
         </div>
         <div class="summary-single">
             <span class="fas fa-comment-alt"></span>
             <div>
-                <h5 id="counter" data-target="10000">0</h5>
+                <h5 id="counter" data-target="${totalComment}">0</h5>
                 <small>Bình luận</small>
             </div>
         </div>

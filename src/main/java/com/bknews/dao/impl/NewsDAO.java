@@ -1,6 +1,7 @@
 package com.bknews.dao.impl;
 
 import com.bknews.dao.INewsDAO;
+import com.bknews.loading.Loadable;
 import com.bknews.mapper.NewsMapper;
 import com.bknews.model.NewsModel;
 import com.bknews.paging.Pageble;
@@ -10,11 +11,14 @@ import java.util.List;
 public class NewsDAO extends AbstractDAO<NewsModel> implements INewsDAO {
 
     @Override
-    public List<NewsModel> findByCategoryId(Long categoryId, Integer offset, Integer limit) {
+    public List<NewsModel> findByCategoryId(Long categoryId, Loadable loadable) {
         StringBuilder sql = new StringBuilder("select * from news");
         sql.append(" where categoryid = ?");
-        if (offset != null && limit != null) {
-            sql.append(" limit "+offset+", "+limit+"");
+        if (loadable.getSorter().getSortName() != null && loadable.getSorter().getSortBy() != null) {
+            sql.append(" order by "+loadable.getSorter().getSortName()+" "+loadable.getSorter().getSortBy()+"");
+        }
+        if (loadable.getOffset() != null && loadable.getLimit() != null) {
+            sql.append(" limit "+loadable.getOffset()+", "+loadable.getLimit()+"");
         }
         return query(sql.toString(), new NewsMapper(), categoryId);
     }

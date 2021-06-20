@@ -23,12 +23,15 @@ public class MessageUtil {
             } else if (message.equals("update_success")) {
                 messageResponse = "Cập nhật thành công !";
                 alertResponse = "success";
-            } else  if (message.equals("delete_success")) {
+            } else if (message.equals("delete_success")) {
                 messageResponse = "Xóa thành công !";
                 alertResponse = "success";
-            } else  if (message.equals("username_invalid")) {
+            } else if (message.equals("username_invalid")) {
                 messageResponse = "Tên tài khoản đã tồn tại !";
                 alertResponse = "warning";
+            } else if (message.equals("sign_in_success")) {
+                messageResponse = "Đăng ký tài khoản thành công !";
+                alertResponse = "success";
             }
             request.setAttribute("message", messageResponse);
             request.setAttribute("alert", alertResponse);

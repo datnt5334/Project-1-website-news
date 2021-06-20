@@ -12,7 +12,6 @@ import com.bknews.sort.Sorter;
 import com.bknews.utils.FromUtil;
 import com.bknews.utils.MessageUtil;
 import com.bknews.utils.SessionUtil;
-import com.sun.xml.internal.ws.api.message.Message;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -36,8 +35,6 @@ public class HomeController extends HttpServlet {
 
     @Inject
     private IUserService userService;
-
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -105,7 +102,7 @@ public class HomeController extends HttpServlet {
             }
             if (flag) {
                 userService.save(model);
-                response.sendRedirect(request.getContextPath()+"/dang-nhap?action=login");
+                response.sendRedirect(request.getContextPath()+"/dang-nhap?action=login&message=sign_in_success");
             } else {
                 response.sendRedirect(request.getContextPath()+"/dang-ky?action=sign&message=username_invalid");
             }

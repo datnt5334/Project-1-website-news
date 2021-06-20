@@ -214,6 +214,11 @@ tbody tr a{
     color: #AC3B61;
 }
 
+.content-rps textarea{
+    width: 80vh;
+    height: 80px;
+}
+
 
 /* summary infor*/
 
@@ -253,6 +258,10 @@ tbody tr a{
 /* Responsive */
 
 @media only screen and (max-width: 1200px){
+
+    .account span{
+        display: none;
+    }
 
     .sidebar-header label{
         display: inline;
@@ -317,6 +326,11 @@ tbody tr a{
 
 @media only screen and (max-width: 860px){
 
+    .content-rps textarea{
+        width: 80vh;
+        height: 80px;
+    }
+
     .grid-manager{
         display: block;
     }
@@ -331,10 +345,28 @@ tbody tr a{
 
 }
 
+@media only screen and (max-width: 768px){
+
+    .content-rps textarea{
+        width: 45vh;
+        height: 80px;
+    }
+}
+
 @media only screen and (max-width: 460px){
+    
 
     .list-manager table{
         width: 500px;
+    }
+
+    .content-rps textarea{
+        width: 25vh
+    }
+
+    .img-rps img{
+        height: 120px;
+        width: 160px;
     }
 
     main {
@@ -342,9 +374,6 @@ tbody tr a{
         padding-right: 1px;
     }
 
-    .account span{
-        display: none;
-    }
 }
 
 
